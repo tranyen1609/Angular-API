@@ -1,0 +1,53 @@
+.status{
+    color: red;
+}
+.nav-link{
+    float: left;
+}
+.nav-link:hover:not(.active){
+    background-color: #ddd;
+    border-radius: 5px;
+}
+.active{
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+.btn{
+    display: block;
+    clear: both;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+    
+}
+.modal-body input{
+    width: 100%;
+}
+.users-list{
+    background-color: white;
+    border-radius: 5px;
+}
+.users-list p{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn-action{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    margin: 4px;
+    width: 100px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.gender{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}

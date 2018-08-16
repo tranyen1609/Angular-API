@@ -1,0 +1,23 @@
+<div class="info">
+    Hello
+    <strong>{{ name }}</strong>!
+    <button class="logout" (click)="logoutUser()">Logout</button>
+</div>
+
+<div class="search-container">
+    <form>
+        <input type="text" placeholder="Search ID user.." name="search" #search (keyup)="0">
+        <button type="submit" routerLink="/detail/{{search.value}}" ><img src="../../assets/images/search.png"></button>
+    </form>
+</div>
+<!-- <div id="my-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Title</h5>
+                    <p>Text</p>
+                </div>
+            </div>
+        </div>
+    </div> -->

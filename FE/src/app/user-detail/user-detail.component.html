@@ -1,0 +1,94 @@
+<div class="user-detail">
+    <p>USER DETAIL</p>
+    <table class="table table-borderless">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <td>
+                    <input class="form-control" type="text" [(ngModel)]="myId" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>
+                    <input class="form-control" type="text" [(ngModel)]="myUser">
+                </td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>
+                    <input class="form-control" type="text" [(ngModel)]="myPass">
+                </td>
+            </tr>
+            <tr>
+                <th>Street</th>
+                <td *ngFor="let a of addresses">
+                    <input type="text" value="{{ a.street }}" (keyup)="myStreet=$event.target.value">
+                    <ng-template #abc>abc</ng-template>
+                </td>
+            </tr>
+            <tr>
+                <th>Address Type</th>
+                <td *ngFor="let a of addresses">
+                    <input type="text" value="{{ a.addressTypeId }}" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th>District</th>
+                <td *ngFor="let a of addresses">
+                    <input type="text" value="{{ a.districtId }}" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td *ngFor="let a of addresses">
+                    <input type="text" value="{{ a.cityId }}" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td *ngFor="let a of addresses">
+                    <input type="text" value="{{ a.countryId }}" disabled>
+                </td>
+            </tr>
+            <tr class="form-group">
+                    <th for="my-input">Country</th>
+                    <td>
+                        <select id="my-input" class="form-control" [(ngModel)]="idCountry" name="countryItem" (change)="getCitiesFromId()">
+                            <option [value]="0">Select country</option>
+                            <option *ngFor="let ctr of countryData.countries" [value]="ctr.id">{{ ctr.name }}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="form-group">
+                    <th for="my-input">City</th>
+                    <td>
+                        <select id="my-input" class="form-control" [(ngModel)]="idCity" name="cityItem" (change)="getDistrictsFromId()">
+                            <option [value]="0">Select city</option>
+                            <option *ngFor="let ct of cityData.cities" [value]="ct.id">{{ ct.name }}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="form-group">
+                    <th for="my-input">District</th>
+                    <td>
+                        <select id="my-input" class="form-control" [(ngModel)]="idDistrict" name="districtItem">
+                            <option [value]="0">Select district</option>
+                            <option *ngFor="let d of districtData.districts" [value]="d.id">{{ d.name }}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Street</th>
+                    <td>
+                        <input class="form-control" type="text" [(ngModel)]="myStreet" name="street">
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+    <div class="btn-action">
+        <button (click)="goBack()" class="btn btn-primary">Back</button>
+    <button type="button" class="btn btn-primary" (click)="updateUser()">Save</button>
+    </div>
+    
+</div>

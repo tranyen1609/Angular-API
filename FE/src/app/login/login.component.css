@@ -1,0 +1,17 @@
+.login{
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.login p{
+    color: red;
+}
+.status{
+    color: red;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

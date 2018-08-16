@@ -1,0 +1,22 @@
+
+/* .active{
+    background-color: black;
+} */
+.info{
+    float: left;
+    color: white;
+}
+.logout{
+    border: none;
+    color: white;
+    background-color: #4267B2;
+    border-left: 1px solid black;
+}
+.logout:hover{
+    color: white;
+    background-color: #3B5DA0;
+    border-radius: 5px;
+}
+.search-container{
+    float: right;
+}

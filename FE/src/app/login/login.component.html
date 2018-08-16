@@ -1,0 +1,25 @@
+<div class="login">
+  
+  <div class="frm-login">
+    <p>{{ status }}</p><br>
+    <h1>LOGIN</h1>
+    <form (ngSubmit)="loginUser()" #form="ngForm">
+      <table class="table table-borderless">
+        <tbody>
+          <tr>
+            <td>User name:</td>
+            <td><input type="text" required [(ngModel)]="myName" name="user" #name="ngModel"  ></td>
+            <td><div class="status" *ngIf="name?.errors?.required && name?.touched">Enter your user name!</div></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input type="password" required [(ngModel)]="myPassword" name="pass" #pass="ngModel"></td>
+            <td><div class="status" *ngIf="pass?.errors?.required && pass?.touched">Enter your password!</div></td>
+          </tr> 
+        </tbody>
+      </table>
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Login</button><br>
+    </form>
+    
+  </div>
+</div>

@@ -1,0 +1,8 @@
+.pagenotfound h1{
+    color: red;
+}
+.pagenotfound{
+    background-color: white;
+    border-radius: 5px;
+    height: 100px;  
+}

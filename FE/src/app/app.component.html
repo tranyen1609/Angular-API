@@ -1,0 +1,18 @@
+<div *ngIf="a; else abc">
+    <div class="header">
+        <app-header></app-header>
+    </div>
+    <div class="main-body">
+        <div class="container-body">
+            <div class="side-bar">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="content">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #abc>
+        <app-login></app-login>
+</ng-template>

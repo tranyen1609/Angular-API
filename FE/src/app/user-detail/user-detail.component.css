@@ -1,0 +1,22 @@
+.user-detail{
+    background-color: white;
+    border-radius: 5px;
+    
+}
+.user-detail p{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.table{
+    text-align: center;
+}
+.btn-action{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    margin: 4px;
+    width: 100px;
+}
